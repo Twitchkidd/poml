@@ -16,5 +16,6 @@
   },
   "bin": {
     "pom": "./index.js"
-  }
+  },
+  "repository": "github:Twitchkidd/pom"
 }
