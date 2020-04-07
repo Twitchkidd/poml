@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const inquirer = require("inquirer");
-const schedule = require("node-schedule");
 const chalk = require("chalk");
 const figlet = require("figlet");
 
@@ -12,7 +11,7 @@ const init = () => {
 const askQuestions = () => {
   const questions = [
     {
-      name: "WORK",
+      name: "workTime",
       type: "list",
       message: "How long shall we set the work timer for?",
       choices: [
@@ -22,75 +21,64 @@ const askQuestions = () => {
         "30 min",
         "40 min",
         "45 min",
-        "60 min"
+        "60 min",
       ],
-      filter: function(val) {
+      filter: function (val) {
         return parseInt(val.split(" ")[0], 10);
-      }
+      },
     },
     {
-      name: "REST",
+      name: "restTime",
       type: "list",
       message: "How long shall we set the rest time for?",
       choices: ["5 min", "10 min", "15 min", "20 min", "30 min"],
-      filter: function(val) {
+      filter: function (val) {
         return parseInt(val.split(" ")[0], 10);
-      }
-    }
+      },
+    },
   ];
   return inquirer.prompt(questions);
 };
 
-const startTimer = (work, rest) => {
-  function workMessage() {
-    console.log(
-      chalk.green(
-        figlet.textSync("Go, go, go!", {
-          font: "Doh",
-          horizontalLayout: "Default",
-          verticalLayout: "Default"
-        })
-      )
-    );
+const printMessage = (type) => {
+  const message = type === "WORK" ? "Go, go, go!" : "Charge up!";
+  const options = {
+    font: "Doh",
+    horizontalLayout: "Default",
+    verticalLayout: "Default",
+  };
+  if (type === "WORK") {
+    console.log(chalk.green(figlet.textSync(message, options)));
+  } else if (type === "REST") {
+    console.log(chalk.cyan(figlet.textSync(message, options)));
   }
-  function restMessage() {
-    console.log(
-      chalk.cyan(
-        figlet.textSync("Charge up!", {
-          font: "Doh",
-          horizontalLayout: "Default",
-          verticalLayout: "Default"
-        })
-      )
-    );
-  }
-  function addMinutesFromNow(minutes) {
-    let now = new Date();
-    return new Date(now.getTime() + minutes * 60000);
-  }
-  function restFn() {
-    restMessage();
-    var k = schedule.scheduleJob(addMinutesFromNow(rest), function() {
-      workFn();
-    });
-  }
-  function workFn() {
-    workMessage();
-    var l = schedule.scheduleJob(addMinutesFromNow(work), function() {
-      restFn();
-    });
-  }
-  workMessage();
-  var j = schedule.scheduleJob(addMinutesFromNow(work), function() {
-    restFn();
-  });
+  console.log(new Date());
+};
+
+const minutesToMilliseconds = (minutes) => minutes * 60000;
+
+const startTimer = (workTime, restTime) => {
+  const totalTime =
+    minutesToMilliseconds(workTime) + minutesToMilliseconds(restTime);
+  printMessage("WORK");
+  var workTimer = setInterval(() => {
+    printMessage("WORK");
+  }, totalTime);
+  const setRestTimer = () => {
+    var restTimer = setInterval(() => {
+      printMessage("REST");
+    }, totalTime);
+  };
+  setTimeout(() => {
+    setRestTimer();
+  }, minutesToMilliseconds(workTime));
 };
 
 const run = async () => {
   init();
   const answers = await askQuestions();
-  const { WORK, REST } = answers;
-  startTimer(WORK, REST);
+  const { workTime, restTime } = answers;
+  startTimer(workTime, restTime);
 };
 
 run();
