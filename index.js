@@ -58,6 +58,9 @@ const printMessage = (type) => {
 const minutesToMilliseconds = (minutes) => minutes * 60000;
 
 const startTimer = (workTime, restTime) => {
+  console.log(
+    `Working for ${workTime} minutes, resting for ${restTime} minutes!`
+  );
   const totalTime =
     minutesToMilliseconds(workTime) + minutesToMilliseconds(restTime);
   printMessage("WORK");
@@ -70,6 +73,7 @@ const startTimer = (workTime, restTime) => {
     }, totalTime);
   };
   setTimeout(() => {
+    printMessage("REST");
     setRestTimer();
   }, minutesToMilliseconds(workTime));
 };
