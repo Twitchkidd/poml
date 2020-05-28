@@ -15,3 +15,9 @@ So this was in here, definitely don't run `yarn install`, run `yarn`, silly goos
 Then run `pom`!
 
 Then go, go, go!
+
+### Whaaat!
+
+Yeap, okay ... so ... also let's clean up the different package managers ... does ... ... wow, a) yes, `yarn link` works, and b) the log to the console is way better, I didn't know you could run `pkgmngr link "libraryName"` and it'd use that one instead! So like if I need to fork something in node_modules ... game-changer, anyway, moving on.
+
+Todo: next set of instructions should have just one package manager, and include what the program does, lol.
