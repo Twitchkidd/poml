@@ -1,23 +1,32 @@
-# pom
+pom
+===
 
-This is a pomodoro timer that's a node cli!
+pomodoro timer
 
----
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/pom.svg)](https://npmjs.org/package/pom)
+[![Downloads/week](https://img.shields.io/npm/dw/pom.svg)](https://npmjs.org/package/pom)
+[![License](https://img.shields.io/npm/l/pom.svg)](https://github.com/Twitchkidd/pom/blob/master/package.json)
 
-### Oops.
+<!-- toc -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
+# Usage
+<!-- usage -->
+```sh-session
+$ npm install -g pom
+$ pom COMMAND
+running command...
+$ pom (-v|--version|version)
+pom/0.2.0 linux-arm node-v16.1.0
+$ pom --help [COMMAND]
+USAGE
+  $ pom COMMAND
+...
+```
+<!-- usagestop -->
+# Commands
+<!-- commands -->
 
-> Clone the repo, then run `yarn install` and then `npm link` from the directory!
-
-So this was in here, definitely don't run `yarn install`, run `yarn`, silly goose, and what was I talking about with `npm link`?!
-
----
-
-Then run `pom`!
-
-Then go, go, go!
-
-### Whaaat!
-
-Yeap, okay ... so ... also let's clean up the different package managers ... does ... ... wow, a) yes, `yarn link` works, and b) the log to the console is way better, I didn't know you could run `pkgmngr link "libraryName"` and it'd use that one instead! So like if I need to fork something in node_modules ... game-changer, anyway, moving on.
-
-Todo: next set of instructions should have just one package manager, and include what the program does, lol.
+<!-- commandsstop -->
