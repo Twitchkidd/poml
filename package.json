@@ -1,20 +1,43 @@
 {
-  "name": "pom",
-  "version": "1.0.0",
-  "description": "Pomodoro timer",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "twitchkidd",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "figlet": "^1.2.3",
-    "inquirer": "^7.0.0"
-  },
-  "bin": {
-    "pom": "./index.js"
-  },
-  "repository": "github:Twitchkidd/pom"
+	"name": "pom",
+	"description": "pomodoro timer",
+	"version": "1.1.0",
+	"author": "twitchkidd",
+	"bin": {
+		"pom": "./bin/run"
+	},
+	"bugs": "https://github.com/Twitchkidd/pom/issues",
+	"dependencies": {
+		"@oclif/command": "^1",
+		"@oclif/config": "^1",
+		"@oclif/plugin-help": "^3",
+		"chalk": "^4.1.1",
+		"figlet": "^1.5.0",
+		"inquirer": "^8.1.0"
+	},
+	"devDependencies": {
+		"@oclif/dev-cli": "^1"
+	},
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"files": [
+		"/bin",
+		"/src"
+	],
+	"homepage": "https://github.com/Twitchkidd/pom",
+	"keywords": [
+		"oclif"
+	],
+	"license": "MIT",
+	"main": "src/index.js",
+	"oclif": {
+		"bin": "pom"
+	},
+	"repository": "Twitchkidd/pom",
+	"scripts": {
+		"prepack": "oclif-dev readme",
+		"test": "echo NO TESTS",
+		"version": "oclif-dev readme && git add README.md"
+	}
 }
