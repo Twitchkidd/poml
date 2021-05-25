@@ -15,11 +15,11 @@ pomodoro timer
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g pom
+$ npm install -g poml
 $ pom COMMAND
 running command...
 $ pom (-v|--version|version)
-pom/0.2.0 linux-arm node-v16.1.0
+poml/1.1.0 linux-arm node-v16.1.0
 $ pom --help [COMMAND]
 USAGE
   $ pom COMMAND
