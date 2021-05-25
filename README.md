@@ -8,16 +8,14 @@ Super simple pomodoro timer!
 [![License](https://img.shields.io/npm/l/pomr.svg)](https://github.com/Twitchkidd/pomr/blob/master/package.json)
 
 <!-- toc -->
-
-- [pomr](#pomr)
-- [Usage](#usage)
-- [Commands](#commands)
+* [pomr](#pomr)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g pomr
 $ pomr COMMAND
@@ -29,7 +27,6 @@ USAGE
   $ pomr COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
