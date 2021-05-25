@@ -1,14 +1,15 @@
-# poml
+# pomr
 
 Super simple pomodoro timer!
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/poml.svg)](https://npmjs.org/package/poml)
-[![Downloads/week](https://img.shields.io/npm/dw/poml.svg)](https://npmjs.org/package/poml)
-[![License](https://img.shields.io/npm/l/poml.svg)](https://github.com/Twitchkidd/poml/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/pomr.svg)](https://npmjs.org/package/pomr)
+[![Downloads/week](https://img.shields.io/npm/dw/pomr.svg)](https://npmjs.org/package/pomr)
+[![License](https://img.shields.io/npm/l/pomr.svg)](https://github.com/Twitchkidd/pomr/blob/master/package.json)
 
 <!-- toc -->
 
+- [pomr](#pomr)
 - [Usage](#usage)
 - [Commands](#commands)
 <!-- tocstop -->
@@ -18,14 +19,14 @@ Super simple pomodoro timer!
 <!-- usage -->
 
 ```sh-session
-$ npm install -g poml
-$ poml COMMAND
+$ npm install -g pomr
+$ pom COMMAND
 running command...
-$ poml (-v|--version|version)
-poml/1.1.0 linux-arm node-v16.1.0
-$ poml --help [COMMAND]
+$ pom (-v|--version|version)
+pomr/1.1.0 linux-arm node-v16.1.0
+$ pom --help [COMMAND]
 USAGE
-  $ poml COMMAND
+  $ pom COMMAND
 ...
 ```
 

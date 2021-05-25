@@ -50,7 +50,7 @@ const questions = [
 
 const ms = min => min * 60000;
 
-class PomlCommand extends Command {
+class PomrCommand extends Command {
 	printMessage(type) {
 		const message = type === WORK ? WORK_MESSAGE : RECHARGE_MESSAGE;
 		if (type === WORK) {
@@ -96,20 +96,20 @@ class PomlCommand extends Command {
 		// if arg1 and arg2, go go go
 		// else find work and recharge block lengths
 		// this.log(`hello ${name} from ./src/index.js`);
-		this.log(chalk.red.bold('Poml: Pomodoro Timer!'));
+		this.log(chalk.red.bold('Pomr: Pomodoro Timer!'));
 		const { workTime, rechargeTime } = await inquirer.prompt(questions); // this can come back out to a fn for MESSAGE_OPTIONS
 		this.go(workTime, rechargeTime);
 	}
 }
 
-PomlCommand.description = `Pomodoro timer CLI!
+PomrCommand.description = `Pomodoro timer CLI!
 ...
-Fire this baby up with \`poml\` and pick a
+Fire this baby up with \`pomr\` and pick a
 work time and recharge time! Customization
 coming soon!
 `;
 
-PomlCommand.flags = {
+PomrCommand.flags = {
 	// add --version flag to show CLI version
 	version: flags.version({ char: 'v' }),
 	// add --help flag to show CLI version
@@ -117,4 +117,4 @@ PomlCommand.flags = {
 	// name: flags.string({ char: 'n', description: 'name to print' }),
 };
 
-module.exports = PomlCommand;
+module.exports = PomrCommand;
