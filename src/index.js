@@ -90,7 +90,8 @@ class PomrCommand extends Command {
 			setrechargeTimer();
 		}, ms(workTime));
 	}
-	async run() {lCommand);
+	async run() {
+		// const { flags } = this.parse(PomCommand);
 		// const name = flags.name || 'world';
 		// if arg1, find rest block length, or back out
 		// if arg1 and arg2, go go go
