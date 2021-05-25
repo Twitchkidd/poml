@@ -20,13 +20,13 @@ Super simple pomodoro timer!
 
 ```sh-session
 $ npm install -g pomr
-$ pom COMMAND
+$ pomr COMMAND
 running command...
-$ pom (-v|--version|version)
+$ pomr (-v|--version|version)
 pomr/1.1.0 linux-arm node-v16.1.0
-$ pom --help [COMMAND]
+$ pomr --help [COMMAND]
 USAGE
-  $ pom COMMAND
+  $ pomr COMMAND
 ...
 ```
 

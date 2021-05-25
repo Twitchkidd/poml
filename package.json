@@ -33,7 +33,7 @@
 	"license": "MIT",
 	"main": "src/index.js",
 	"oclif": {
-		"bin": "pom"
+		"bin": "pomr"
 	},
 	"repository": "Twitchkidd/pomr",
 	"scripts": {
