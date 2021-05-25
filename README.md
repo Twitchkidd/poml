@@ -21,7 +21,7 @@ $ npm install -g pomr
 $ pomr COMMAND
 running command...
 $ pomr (-v|--version|version)
-pomr/1.1.0 linux-arm node-v16.1.0
+pomr/1.1.1 linux-arm node-v16.1.0
 $ pomr --help [COMMAND]
 USAGE
   $ pomr COMMAND

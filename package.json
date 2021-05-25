@@ -1,7 +1,7 @@
 {
 	"name": "pomr",
 	"description": "pomodoro timer",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"author": "twitchkidd",
 	"bin": {
 		"pomr": "./bin/run"
