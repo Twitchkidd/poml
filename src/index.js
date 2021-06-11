@@ -1,8 +1,13 @@
+const readline = require('readline');
 const { Command, flags } = require('@oclif/command');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const figlet = require('figlet');
 const format = require('date-fns/format');
+
+readline.emitKeypressEvents(process.stdin);
+process.stdin.setRawMode(true);
+// https://thisdavej.com/making-interactive-node-js-console-apps-that-listen-for-keypress-events/
 
 const FONT = 'Doh';
 const CUSTOM = 'CUSTOM';
