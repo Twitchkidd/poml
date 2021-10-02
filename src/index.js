@@ -51,6 +51,16 @@ const questions = [
 const ms = min => min * 60000;
 
 class PomrCommand extends Command {
+	static description = `
+	Pick working and recharging times to make sure you're taking breaks!
+	`;
+	static flags = {
+		// add --version flag to show CLI version
+		version: flags.version({ char: 'v' }),
+		// add --help flag to show CLI version
+		help: flags.help({ char: 'h' }),
+		// name: flags.string({ char: 'n', description: 'name to print' }),
+	};
 	printMessage(type) {
 		const message = type === WORK ? WORK_MESSAGE : RECHARGE_MESSAGE;
 		if (type === WORK) {
@@ -102,20 +112,5 @@ class PomrCommand extends Command {
 		this.go(workTime, rechargeTime);
 	}
 }
-
-PomrCommand.description = `Pomodoro timer CLI!
-...
-Fire this baby up with \`pomr\` and pick a
-work time and recharge time! Customization
-coming soon!
-`;
-
-PomrCommand.flags = {
-	// add --version flag to show CLI version
-	version: flags.version({ char: 'v' }),
-	// add --help flag to show CLI version
-	help: flags.help({ char: 'h' }),
-	// name: flags.string({ char: 'n', description: 'name to print' }),
-};
 
 module.exports = PomrCommand;
