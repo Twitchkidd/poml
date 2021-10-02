@@ -1,12 +1,12 @@
 {
 	"name": "pomr",
 	"description": "pomodoro timer",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"author": "twitchkidd",
 	"bin": {
 		"pomr": "./bin/run"
 	},
-	"bugs": "https://github.com/Twitchkidd/pomr/issues",
+	"bugs": "https://gitlab.com/twitchkidd/pomr/issues",
 	"dependencies": {
 		"@oclif/command": "^1",
 		"@oclif/config": "^1",
@@ -26,7 +26,7 @@
 		"/bin",
 		"/src"
 	],
-	"homepage": "https://github.com/Twitchkidd/pomr",
+	"homepage": "https://gitlab.com/twitchkidd/pomr",
 	"keywords": [
 		"oclif"
 	],
@@ -35,7 +35,7 @@
 	"oclif": {
 		"bin": "pomr"
 	},
-	"repository": "Twitchkidd/pomr",
+	"repository": "twitchkidd/pomr",
 	"scripts": {
 		"prepack": "oclif-dev readme",
 		"test": "echo NO TESTS",
