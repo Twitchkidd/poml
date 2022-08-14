@@ -10,9 +10,13 @@
 	"homepage": "https://github.com/Twitchkidd/pomr",
 	"license": "MIT",
 	"scripts": {
-		"start": "zx index.mjs"
+		"start": "zx index.mjs",
+		"dev": "nodemon --exec 'zx' ./index.mjs"
 	},
 	"dependencies": {
 		"zx": "^7.0.8"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
 	}
 }
