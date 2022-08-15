@@ -6,6 +6,10 @@
 	"bugs": "https://gitlab.com/twitchkidd/pomr/issues",
 	"homepage": "https://gitlab.com/twitchkidd/pomr",
 	"license": "MIT",
+	"main": "./lib/pomr.js",
+	"bin": {
+		"pom": "./bin/index.js"
+	},
 	"scripts": {
 		"start": "node ./bin/index.js",
 		"dev": "nodemon --watch lib --watch bin ./bin/index.js"
@@ -15,5 +19,6 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.19"
-	}
+	},
+	"type": "module"
 }

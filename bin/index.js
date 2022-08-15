@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { pomr } from '../lib/pomr';
+import { pom } from '../lib/pomr.mjs';
 
-pomr();
+pom();
