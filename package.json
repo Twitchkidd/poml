@@ -1,20 +1,17 @@
 {
 	"name": "pomr",
-	"description": "pomodoro timer",
+	"description": "simple pomodoro timer",
 	"version": "2.0.0",
 	"author": "twitchkidd",
-	"bugs": "https://github.com/Twitchkidd/pomr/issues",
-	"engines": {
-		"node": ">=16.0.0"
-	},
-	"homepage": "https://github.com/Twitchkidd/pomr",
+	"bugs": "https://gitlab.com/twitchkidd/pomr/issues",
+	"homepage": "https://gitlab.com/twitchkidd/pomr",
 	"license": "MIT",
 	"scripts": {
-		"start": "zx index.mjs",
-		"dev": "nodemon --exec 'zx' ./index.mjs"
+		"start": "node ./bin/index.js",
+		"dev": "nodemon --watch lib --watch bin ./bin/index.js"
 	},
 	"dependencies": {
-		"zx": "^7.0.8"
+		"chalk": "^5.0.1"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.19"
